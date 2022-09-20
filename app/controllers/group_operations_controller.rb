@@ -1,5 +1,5 @@
 class GroupOperationsController < ApplicationController
-  before_action :set_group_operation, only: %i[ show edit update destroy ]
+  before_action :set_group_operation, only: %i[show edit update destroy]
 
   # GET /group_operations or /group_operations.json
   def index
@@ -7,8 +7,7 @@ class GroupOperationsController < ApplicationController
   end
 
   # GET /group_operations/1 or /group_operations/1.json
-  def show
-  end
+  def show; end
 
   # GET /group_operations/new
   def new
@@ -16,8 +15,7 @@ class GroupOperationsController < ApplicationController
   end
 
   # GET /group_operations/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /group_operations or /group_operations.json
   def create
@@ -25,7 +23,7 @@ class GroupOperationsController < ApplicationController
 
     respond_to do |format|
       if @group_operation.save
-        format.html { redirect_to group_operation_url(@group_operation), notice: "Group operation was successfully created." }
+        format.html { redirect_to group_operation_url(@group_operation), notice: 'Group operation was successfully created.' }
         format.json { render :show, status: :created, location: @group_operation }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class GroupOperationsController < ApplicationController
   def update
     respond_to do |format|
       if @group_operation.update(group_operation_params)
-        format.html { redirect_to group_operation_url(@group_operation), notice: "Group operation was successfully updated." }
+        format.html { redirect_to group_operation_url(@group_operation), notice: 'Group operation was successfully updated.' }
         format.json { render :show, status: :ok, location: @group_operation }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +50,20 @@ class GroupOperationsController < ApplicationController
     @group_operation.destroy
 
     respond_to do |format|
-      format.html { redirect_to group_operations_url, notice: "Group operation was successfully destroyed." }
+      format.html { redirect_to group_operations_url, notice: 'Group operation was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_group_operation
-      @group_operation = GroupOperation.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def group_operation_params
-      params.require(:group_operation).permit(:group_id, :operation_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_group_operation
+    @group_operation = GroupOperation.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def group_operation_params
+    params.require(:group_operation).permit(:group_id, :operation_id)
+  end
 end
