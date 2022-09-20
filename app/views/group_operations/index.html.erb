@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Group operations</h1>
+
+<div id="group_operations">
+  <% @group_operations.each do |group_operation| %>
+    <%= render group_operation %>
+    <p>
+      <%= link_to "Show this group operation", group_operation %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New group operation", new_group_operation_path %>
