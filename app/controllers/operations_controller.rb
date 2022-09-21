@@ -1,68 +1,36 @@
 class OperationsController < ApplicationController
-  before_action :set_operation, only: %i[show edit update destroy]
-
-  # GET /operations or /operations.json
+  before_action :authenticate_user!
   def index
-    @operations = Operation.all
+    @group = current_user.groups.find(params[:group_id])
+    @operations = @group.operations
   end
 
-  # GET /operations/1 or /operations/1.json
-  def show; end
-
-  # GET /operations/new
   def new
-    @operation = Operation.new
+    @group = current_user.groups.find(params[:group_id])
+    @operation = @group.operations.new
   end
 
-  # GET /operations/1/edit
-  def edit; end
-
-  # POST /operations or /operations.json
   def create
-    @operation = Operation.new(operation_params)
-
-    respond_to do |format|
-      if @operation.save
-        format.html { redirect_to operation_url(@operation), notice: 'Operation was successfully created.' }
-        format.json { render :show, status: :created, location: @operation }
+    @group = current_user.groups.find(params[:group_id])
+    @operation = current_user.operations.create(operation_params)
+    puts @operation
+    if @operation.save
+      @group_operation = @operation.group_operations.create(group_id: @group.id, operation_id: @operation.id)
+      if @group_operation.save
+        flash[:notice] = 'New transaction created successfully'
+        redirect_to group_operations_path(@group)
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @operation.errors, status: :unprocessable_entity }
+        flash.now[:alert] = 'Transaction category creation failed'
+        render action: 'new'
       end
-    end
-  end
-
-  # PATCH/PUT /operations/1 or /operations/1.json
-  def update
-    respond_to do |format|
-      if @operation.update(operation_params)
-        format.html { redirect_to operation_url(@operation), notice: 'Operation was successfully updated.' }
-        format.json { render :show, status: :ok, location: @operation }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @operation.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /operations/1 or /operations/1.json
-  def destroy
-    @operation.destroy
-
-    respond_to do |format|
-      format.html { redirect_to operations_url, notice: 'Operation was successfully destroyed.' }
-      format.json { head :no_content }
+    else
+      flash.now[:alert] = 'Transaction creation failed'
+      render action: 'new'
     end
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_operation
-    @operation = Operation.find(params[:id])
-  end
-
-  # Only allow a list of trusted parameters through.
   def operation_params
     params.require(:operation).permit(:name, :amount)
   end
