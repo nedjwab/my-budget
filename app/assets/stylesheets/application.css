@@ -1,8 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 * {
     margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size:40px;
+    margin-top: 27px; 
+    color : #5fb523
 }
 
 .elements {
@@ -20,3 +27,45 @@
     font-weight: 600;
     font-size: 1.9rem; 
 }
+
+.logout-button {
+    text-decoration: none;
+    color :#EEE6CE;
+    background-color: #890F0D;
+    cursor: pointer;
+    padding : 1%;
+    border-radius: 9px;
+}
+
+.category-header {
+    text-align:center ;
+    font-size: 40px;
+    margin-top: 27px;
+}
+
+.login-container {
+    display:flex ;
+    flex-direction: column;
+    width :70%;
+    gap:23px;
+    margin: 0 17%;
+    border : 1px solid #D3CEDF;
+    padding :30px;
+}
+
+.input {
+    width: 90%;
+    padding :11px;
+    margin-top: 10px;
+}
+
+.login-button {
+    background-color:#5fb523;
+    color:white;
+    cursor: pointer;
+    width: 7%;
+    padding : 1%;
+    border-radius: 6px;
+    border:none;
+}
+
