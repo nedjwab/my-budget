@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+}
+
+.elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #3778c2;
+    padding: 19px;
+    color :white ;
+
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-weight: 600;
+    font-size: 1.9rem; 
+}
