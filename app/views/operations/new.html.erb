@@ -1,9 +1,18 @@
-<h1>New operation</h1>
-
-<%= render "form", operation: @operation %>
-
-<br>
-
 <div>
-  <%= link_to "Back to operations", operations_path %>
+  <%= link_to "", group_operations_path(@group)%>
+  <h3>New Transaction</h3>
 </div>
+<%= form_with model: @operation, url: group_operations_path, method: :post, data: { turbo: false } do |form| %>
+  <div >
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control', placeholder: 'Transaction name' %>
+  </div>
+  <div>
+    <%= form.label :amount %>
+    <%= form.text_field :amount, class: 'form-control', placeholder: 12, type: "number", step: ".01" %>
+  </div>
+
+  <div>
+    <%= form.submit 'Save'%>
+  </div>
+<% end %>

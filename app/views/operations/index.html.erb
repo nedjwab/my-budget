@@ -1,14 +1,33 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Operations</h1>
-
-<div id="operations">
-  <% @operations.each do |operation| %>
-    <%= render operation %>
-    <p>
-      <%= link_to "Show this operation", operation %>
-    </p>
-  <% end %>
+<div>
+  <h3 class="mb-3">Transactions</h3>
 </div>
-
-<%= link_to "New operation", new_operation_path %>
+<div>
+  <div>
+    <%= image_tag @group.icon || "http://localhost:3000/users/sign_up.jpg" %>
+    <div>
+      <p><%= @group.name %></p>
+      <p><%= l @group.created_at, format: :long %></p>
+    </div>
+    <p class="fw-bolder">
+      $<%= @group.operations.sum(&:amount) %>
+    </p>
+  </div>
+</div>
+<% if @operations.count > 0 %>
+  <% @operations.each do |operation| %>
+    <div class="card mb-2">
+      <div>
+        <div>
+          <p ><%= operation.name %></p>
+          <p><%= l operation.created_at, format: :long %></p>
+        </div>
+        <p>
+          $<%= operation.amount %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <p>You have no Transactions and new to continue</p>
+<% end %>
+<%= link_to 'Add Transaction', new_group_operation_path(@group)%>

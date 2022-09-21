@@ -1,5 +1,6 @@
 class Group < ApplicationRecord
   belongs_to :user
+  has_many :group_operations
   has_many :operations, through: :group_operations
-  validates :name, :icon, presence: true, length: { in: 1..100 }
+  validates :name, :icon, presence: true
 end

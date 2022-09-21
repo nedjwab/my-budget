@@ -12,6 +12,7 @@ class GroupOperationsController < ApplicationController
   # GET /group_operations/new
   def new
     @group_operation = GroupOperation.new
+    @user = current_user.name
   end
 
   # GET /group_operations/1/edit
