@@ -1,6 +1,7 @@
 class GroupOperationsController < ApplicationController
   before_action :set_group_operation, only: %i[show edit update destroy]
-
+  before_action :update_allowed_parameters, if: :devise_controller?
+  before_action :authenticate_user!
   # GET /group_operations or /group_operations.json
   def index
     @group_operations = GroupOperation.all

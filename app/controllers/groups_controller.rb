@@ -1,5 +1,7 @@
 class GroupsController < ApplicationController
-  before_action :set_recipe, only: %i[show edit update destroy]
+  before_action :set_group, only: %i[show edit update destroy]
+  before_action :update_allowed_parameters, if: :devise_controller?
+  before_action :authenticate_user!
 
   def index
     @groups = current_user.groups if user_signed_in?

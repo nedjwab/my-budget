@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'groups#index'
-
-  get 'groups/index', to: 'groups#index'
+  root "users#home"
+  
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end

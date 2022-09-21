@@ -1,4 +1,5 @@
 class OperationsController < ApplicationController
+  before_action :update_allowed_parameters, if: :devise_controller?
   before_action :authenticate_user!
   def index
     @group = current_user.groups.find(params[:group_id])
