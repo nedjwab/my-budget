@@ -71,12 +71,14 @@ h1 {
 
 .notification {
     text-align: center;
-    margin: 0 27px;
+    margin-top: 40px;
     color :#3778c2; 
     padding :13px;
     width: 50%;
     font-size: 20px;
-    border: 1px solid black;
+    position: relative;
+    left:25%;
+    border: 1px solid #3778c2;
 }
 
 .categories-container {
@@ -124,6 +126,7 @@ h1 {
     text-decoration: none;
     text-align: center;
     font-size: 19px;
+    margin-bottom: 90px;
 }
 
 .category-title, .category-date {
