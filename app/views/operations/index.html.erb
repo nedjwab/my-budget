@@ -15,13 +15,17 @@
   <% @operations.each do |operation| %>
     <div class="category-card">
     <%= image_tag @group.icon , alt: 'Category icon',:class=>"decoration" %>
-          <p ><%= operation.name %></p>
-          <p><%= l operation.created_at, format: :long,:class =>"decoration" %></p>    
+    <div class="ccontainer">
+          <p class = 'category-title' ><%= operation.name %></p>
+          <p><%= l operation.created_at, format: :long,:class =>"decoration" %></p>   
+    </div>
+          <div class="brow"> 
           <%= operation.amount %>$
           <% if can? :manage, operation %>
         </p>
         <%= button_to "Delete" ,group_operation_path(@group.id,operation), method: :delete ,class: "destroy-button"   %>
         <% end %>
+        </div>
       </div>
   <% end %>
 <% else %>

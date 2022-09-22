@@ -281,12 +281,12 @@ h1 {
 @media only screen and (max-width: 600px) {
 
   * {
-    font-size: 17px;
+  font-size:19px
   }
 
-.button {
-  margin: 0 10px;
- }
+  .button {
+    margin: 0 10px;
+  }
 
  .login-container {
   width: 70%;
@@ -308,18 +308,19 @@ h1 {
  }
 
  .category-card {
-  gap: 2px;
-  width: 50%;
+  gap: 14px;
+  width: 54%;
   font-weight: 600;
-  font-size: 23px;
+  font-size: 20px;
   align-items: center;
   border: 1px solid #d3cedf;
-  padding: 54px;
+  padding: 50px;
   height: 100px;
   margin-bottom: 50px;
   cursor: pointer;
  }
- .brow {
+
+ .brow,.ccontainer {
   display: flex;
   flex-direction: column;
   margin-left: 2%;
