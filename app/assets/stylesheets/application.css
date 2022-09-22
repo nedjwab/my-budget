@@ -82,7 +82,7 @@ h1 {
     width: 50%;
     font-size: 20px;
     position: relative;
-    left:25%;
+    left:23%;
     border: 1px solid #3778c2;
 }
 
@@ -126,7 +126,6 @@ h1 {
     position: relative;
     left:45%;
     padding : 1.5%;
-    border-radius: 6px;
     border:none;
     text-decoration: none;
     text-align: center;
