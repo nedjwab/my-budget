@@ -35,4 +35,6 @@ class OperationsController < ApplicationController
   def operation_params
     params.require(:operation).permit(:name, :amount)
   end
+
+
 end
