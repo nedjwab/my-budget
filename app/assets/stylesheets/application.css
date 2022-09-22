@@ -198,3 +198,11 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
+.collaps {
+    background-color:white;
+    padding:13px;
+    text-align: center;
+    color:#3778c2; 
+   
+}

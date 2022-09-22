@@ -12,7 +12,9 @@
     <%= form.label :amount ,:class =>"label"%></br>
     <%= form.text_field :amount,:class =>"input", placeholder: 12, type: "number", step: ".01" %>
   </div>
-
+  <div>
+    <%= form.collection_select :group_id, Group.where(user_id: current_user.id).order(:name),:id,:name, {prompt:'Category'},:class=>"collaps" %>
+  </div>
   <div>
     <%= form.submit 'Save',class: "Add-category"%>
   </div>
