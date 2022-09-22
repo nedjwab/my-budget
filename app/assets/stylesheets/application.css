@@ -277,3 +277,76 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
 }
+
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 19px;
+  }
+
+  .button {
+    margin: 0 10px;
+  }
+
+  .login-container {
+    width: 70%;
+    gap: 23px;
+    margin: 10px 7%;
+    border: 1px solid #d3cedf;
+    padding: 30px;
+  }
+
+  .login-button {
+    width: 28%;
+    padding: 3%;
+  }
+
+  .categories-container {
+    width: 100%;
+    gap: 2px;
+  }
+
+  .category-card {
+    gap: 14px;
+    width: 54%;
+    font-weight: 600;
+    font-size: 20px;
+    align-items: center;
+    border: 1px solid #d3cedf;
+    padding: 50px;
+    height: 100px;
+    margin-bottom: 50px;
+    cursor: pointer;
+  }
+
+  .brow,
+  .ccontainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+  }
+
+  .pic {
+    width: 30%;
+  }
+
+  .Add-button {
+    padding: 2%;
+    margin-bottom: 23px;
+    position: relative;
+    left: 35%;
+  }
+
+  .Add-category {
+    padding: 5%;
+    position: relative;
+    left: 33%;
+  }
+
+  .destroy-button {
+    padding: 20%;
+  }
+
+  .h1-mobile {
+    font-size: 19px;
+  }
+}

@@ -12,15 +12,17 @@
 <div class="categories-container">
   <% @groups.each do |group| %>
     <div class="category-card">
-   <%= image_tag group.icon , alt: 'Category icon',:class=>"decoration" %>
+   <%= image_tag group.icon , alt: 'Category icon',:class=>"decoration pic" %>
     <div div class="date-container">
       <h3><%=link_to group.name,  group_operations_path(group), :class => 'category-title'%></h3>
       <p class = 'category-date'><%= l group.created_at, format: :long ,:class =>"decoration"%></p>
     </div>
+    <div class="brow">
     <p>$<%= group.operations.sum(&:amount) %></p>
     <% if can? :manage, group %>
       <%= button_to "Delete" ,group, method: :delete ,class: "destroy-button"   %>
     <% end %>
+    </div>
   </div>
   <% end %>
   </div>

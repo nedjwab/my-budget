@@ -15,19 +15,21 @@
   <% @operations.each do |operation| %>
     <div class="category-card">
     <%= image_tag @group.icon , alt: 'Category icon',:class=>"decoration" %>
-          <p ><%= operation.name %></p>
-          <p><%= l operation.created_at, format: :long,:class =>"decoration" %></p>
-      
-        <p>
+    <div class="ccontainer">
+          <p class = 'category-title' ><%= operation.name %></p>
+          <p><%= l operation.created_at, format: :long,:class =>"decoration" %></p>   
+    </div>
+          <div class="brow"> 
           <%= operation.amount %>$
           <% if can? :manage, operation %>
         </p>
         <%= button_to "Delete" ,group_operation_path(@group.id,operation), method: :delete ,class: "destroy-button"   %>
         <% end %>
+        </div>
       </div>
   <% end %>
 <% else %>
-  <h1>You have no Transactions and new to continue</h1>
+  <h1 class="h1-mobile">You have no Transactions and new to continue</h1>
 <% end %>
 </div>
 <%= link_to 'Add Transaction', new_group_operation_path(@group), class: "Add-button"%>
