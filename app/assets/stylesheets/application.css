@@ -149,3 +149,9 @@ h1 {
     background-color:white ;
     border : 1px solid #890F0D;
 }
+
+.Add-button:hover {
+    background-color:white;
+    color:#5fb523;
+    border :1px solid #5fb523;
+}
