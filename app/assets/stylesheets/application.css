@@ -23,6 +23,7 @@ h1 {
     color :white ;
     padding:10px;
     margin:0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .title {
@@ -38,6 +39,10 @@ h1 {
 .arrow {
     color: white;
     margin-top: 31px;
+}
+
+.arrow:hover {
+    color :#5fb523
 }
 
 .logo {
@@ -244,13 +249,14 @@ h1 {
     color : #3778c2; 
     text-align: center;
     margin-top: 190px;
+    
 }
 
 .button {
     margin: 0 600px;
     display: flex;
     flex-direction: row;
-   justify-content:space-between
+    justify-content:space-between
 }
 
 .s-button {
@@ -263,6 +269,7 @@ h1 {
     text-decoration: none;
     text-align: center;
     font-size: 19px;
-    border-radius: 6px
+    border-radius: 6px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
  
