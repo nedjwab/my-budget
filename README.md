@@ -1,9 +1,6 @@
 ## My budget
-my budget
+ a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 >
-
-## Schema
-
 
 ## Built With
 
@@ -30,6 +27,8 @@ To setup linters on your local environment, please follow these steps.
 1- Run `bundle install`.
 2- Run `rubocop .` for the errors.
 
+## Live demo
+
 ### Prerequisites
 
 IDE(VSCode etc.), WSL(for Windows OS), for linters RuboCop
@@ -46,6 +45,7 @@ IDE(VSCode etc.), WSL(for Windows OS), for linters RuboCop
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
+Original design idea by  [https://www.behance.net/gregoirevella]
 
 Feel free to check the [issues page](../../issues/).
 
