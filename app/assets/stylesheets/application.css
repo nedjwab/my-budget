@@ -188,3 +188,11 @@ h1 {
     flex-direction:column;
     gap:14px;
 }
+
+.category-header {
+    display:flex;
+    flex-direction: row;
+    gap:36%;
+    justify-content: center;
+    align-items: center;
+}

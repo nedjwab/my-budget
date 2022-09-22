@@ -1,33 +1,25 @@
 <div>
-  <h3 class="mb-3">Transactions</h3>
+  <h1>Transactions</h1>
 </div>
-<div>
-  <div>
-    <%= image_tag @group.icon || "http://localhost:3000/users/sign_up.jpg" %>
-    <div>
+    <div class="category-header">
       <p><%= @group.name %></p>
-      <p><%= l @group.created_at, format: :long %></p>
+      <p><%= @group.operations.sum(&:amount) %>$</p>
     </div>
-    <p class="fw-bolder">
-      $<%= @group.operations.sum(&:amount) %>
-    </p>
-  </div>
-</div>
-<% if @operations.count > 0 %>
+    <div class="categories-container"> 
+  <% if @operations.count > 0 %>
   <% @operations.each do |operation| %>
-    <div class="card mb-2">
-      <div>
-        <div>
+    <div class="category-card">
+    <%= image_tag @group.icon , alt: 'Category icon',:class=>"decoration" %>
           <p ><%= operation.name %></p>
           <p><%= l operation.created_at, format: :long %></p>
-        </div>
+      
         <p>
-          $<%= operation.amount %>
+          <%= operation.amount %>$
         </p>
       </div>
-    </div>
   <% end %>
 <% else %>
-  <p>You have no Transactions and new to continue</p>
+  <h1>You have no Transactions and new to continue</h1>
 <% end %>
-<%= link_to 'Add Transaction', new_group_operation_path(@group)%>
+</div>
+<%= link_to 'Add Transaction', new_group_operation_path(@group), class: "Add-button"%>
