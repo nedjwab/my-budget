@@ -15,7 +15,10 @@
       
         <p>
           <%= operation.amount %>$
+          <% if can? :manage, operation %>
         </p>
+        <%= button_to "Delete" ,group_operation_path(@group.id,operation), method: :delete ,class: "destroy-button"   %>
+        <% end %>
       </div>
   <% end %>
 <% else %>

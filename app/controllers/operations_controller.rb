@@ -30,6 +30,16 @@ class OperationsController < ApplicationController
     end
   end
 
+  def destroy
+    @operation = Operation.find(params[:id])
+    @operation.destroy
+    respond_to do |format|
+      format.html do
+        redirect_to  groups_path, notice: 'Operation was successfully deleted.'
+      end
+    end
+  end
+
   private
 
   def operation_params
