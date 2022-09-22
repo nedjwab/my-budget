@@ -35,7 +35,7 @@ class OperationsController < ApplicationController
     @operation.destroy
     respond_to do |format|
       format.html do
-        redirect_to  group_operations_url, notice: 'Operation was successfully deleted.'
+        redirect_to group_operations_url, notice: 'Operation was successfully deleted.'
       end
     end
   end
@@ -45,6 +45,4 @@ class OperationsController < ApplicationController
   def operation_params
     params.require(:operation).permit(:name, :amount)
   end
-
-
 end

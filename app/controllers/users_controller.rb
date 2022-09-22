@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
-  def home;end
-
+  def home; end
 
   # GET /users or /users.json
   def index
