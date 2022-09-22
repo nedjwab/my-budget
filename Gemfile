@@ -52,6 +52,8 @@ gem 'bootsnap', require: false
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+gem 'rake'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
