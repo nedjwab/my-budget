@@ -1,8 +1,9 @@
 class OperationsController < ApplicationController
+  before_action :update_allowed_parameters, if: :devise_controller?
   before_action :authenticate_user!
   def index
     @group = current_user.groups.find(params[:group_id])
-    @operations = @group.operations
+    @operations = @group.operations.order(created_at: :desc)
   end
 
   def new
@@ -26,6 +27,16 @@ class OperationsController < ApplicationController
     else
       flash.now[:alert] = 'Transaction creation failed'
       render action: 'new'
+    end
+  end
+
+  def destroy
+    @operation = Operation.find(params[:id])
+    @operation.destroy
+    respond_to do |format|
+      format.html do
+        redirect_to group_operations_url, notice: 'Operation was successfully deleted.'
+      end
     end
   end
 

@@ -1,8 +1,14 @@
 class GroupsController < ApplicationController
-  before_action :set_recipe, only: %i[show edit update destroy]
+  before_action :set_group, only: %i[show edit update destroy]
+  before_action :update_allowed_parameters, if: :devise_controller?
+  before_action :authenticate_user!
 
   def index
-    @groups = current_user.groups if user_signed_in?
+    if current_user
+      @groups = current_user.groups
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def new
@@ -14,7 +20,7 @@ class GroupsController < ApplicationController
     @group = @user.groups.create(group_params)
     if @group.save
       flash[:notice] = 'New category created successfully'
-      redirect_to groups_index_path
+      redirect_to groups_path
 
     else
       flash.now[:alert] = 'Category creation failed'
@@ -22,7 +28,21 @@ class GroupsController < ApplicationController
     end
   end
 
+  def destroy
+    @group = Group.find(params[:id])
+    @group.destroy
+    respond_to do |format|
+      format.html do
+        redirect_to groups_path, notice: 'group was successfully deleted.'
+      end
+    end
+  end
+
   private
+
+  def set_group
+    @group = Group.find(params[:id])
+  end
 
   def group_params
     params.require(:group).permit(:name, :icon)

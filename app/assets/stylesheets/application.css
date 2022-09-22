@@ -1,15 +1,279 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import "font-awesome";
+
+body {
+  margin: 0;
+  overflow: scroll;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 27px;
+  color: #3778c2;
+  margin-bottom: 56px;
+}
+
+.elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #3778c2;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+}
+
+.title {
+  font-size: 29px;
+  text-align: center;
+}
+
+.items {
+  display: flex;
+  gap: 23px;
+}
+
+.arrow {
+  color: white;
+  margin-top: 31px;
+}
+
+.arrow:hover {
+  color: #5fb523;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-weight: 600;
+  font-size: 1.9rem;
+  cursor: pointer;
+  margin-left: 23px;
+  color: white;
+  text-decoration: none;
+}
+
+.logout-button {
+  text-decoration: none;
+  color: #eee6ce;
+  background-color: #890f0d;
+  cursor: pointer;
+  padding: 10px;
+  height: 21px;
+  border-radius: 9px;
+}
+
+.category-header {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 27px;
+  display: flex;
+  flex-direction: row;
+  gap: 36%;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 23px;
+  margin: 0 17%;
+  border: 1px solid #d3cedf;
+  padding: 30px;
+}
+
+.input {
+  width: 90%;
+  padding: 19px;
+  margin-top: 10px;
+  margin-bottom: 23px;
+}
+
+.label {
+  color: #3778c2;
+  font-size: 19px;
+}
+
+.login-button {
+  background-color: #5fb523;
+  color: white;
+  cursor: pointer;
+  width: 7%;
+  padding: 1%;
+  border-radius: 6px;
+  border: none;
+}
+
+.notification {
+  text-align: center;
+  margin-top: 40px;
+  color: #3778c2;
+  padding: 13px;
+  width: 50%;
+  font-size: 20px;
+  position: relative;
+  left: 23%;
+  border: 1px solid #3778c2;
+}
+
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  padding: 15px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  border-radius: 13px;
+  gap: 25px;
+  width: 50%;
+  font-weight: 600;
+  font-size: 23px;
+  align-items: center;
+  border: 1px solid #d3cedf;
+  justify-content: space-between;
+  padding: 54px;
+  height: 100px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.s-button {
+  background-color: #5fb523;
+  color: white;
+  cursor: pointer;
+  width: 40%;
+  padding: 3%;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 19px;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.category-card:hover,
+.s-button:hover {
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+}
+
+.Add-button {
+  background-color: #5fb523;
+  color: white;
+  cursor: pointer;
+  width: 9%;
+  position: relative;
+  left: 45%;
+  padding: 1.5%;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 19px;
+  border-radius: 6px;
+}
+
+.Add-category {
+  background-color: #5fb523;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  padding: 1.9%;
+  margin-top: 19px;
+  position: relative;
+  left: 41%;
+}
+
+.category-title,
+.category-date {
+  text-decoration: none;
+  color: #3778c2;
+}
+
+.category-date {
+  font-size: 19px;
+  color: #d3cedf;
+}
+
+.destroy-button {
+  text-decoration: none;
+  color: #eee6ce;
+  background-color: #890f0d;
+  cursor: pointer;
+  padding: 40%;
+  border: none;
+  border-radius: 6px;
+}
+
+.destroy-button:hover,
+.logout-button:hover,
+.Add-button:hover,
+.Add-category:hover {
+  color: #890f0d;
+  background-color: white;
+  border: 1px solid #890f0d;
+}
+
+.Add-button:hover,
+.Add-category:hover,
+.s-button:hover {
+  background-color: white;
+  color: #5fb523;
+  border: 1px solid #5fb523;
+}
+
+.decoration {
+  font-size: 17px;
+  color: gray;
+}
+
+.rahba {
+  margin: 33px 3px;
+}
+
+.date-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.collaps {
+  background-color: white;
+  padding: 13px;
+  text-align: center;
+  color: #3778c2;
+}
+
+.link-decoration {
+  text-decoration: none;
+  color: #3778c2;
+}
+
+.centred-title {
+  text-align: center;
+}
+
+.logo-splash {
+  font-family: 'Pacifico', cursive;
+  font-weight: 600;
+  font-size: 3rem;
+  color: #3778c2;
+  text-align: center;
+  margin-top: 190px;
+}
+
+.button {
+  margin: 0 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

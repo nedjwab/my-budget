@@ -1,18 +1,23 @@
+<header>
+<%= render partial:"shared/navbar" ,locals: {title: 'Add Categories'}%>
+</header>
+
 <div class="min_nav">
-  <%= link_to "", groups_path, class: "fa fa-chevron-left fa-lg" %>
-  <h3 class="mb-3">Categories</h3>
+  <h1>Add Categories</h1>
 </div>
+<div class="login-container">
 <%= form_with model: @group, url: groups_path,  data: { turbo: false } do |form| %>
-  <div class="mb-3">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: 'form-control', placeholder: 'Category name' %>
-  </div>
-  <div class="mb-3">
-    <%= form.label :icon %>
-    <%= form.url_field :icon, class: 'form-control', placeholder: 'Icon url' %>
+  <div >
+    <%= form.label :name,:class =>"label" %> </br>
+    <%= form.text_field :name,:class =>"input", placeholder: 'Category name' %>
+  </div> </br>
+  <div>
+    <%= form.label :icon,:class =>"label" %></br>
+    <%= form.url_field :icon,:class =>"input", placeholder: 'Icon url' %>
   </div>
 
-  <div class="mb-3">
-    <%= form.submit 'Create category', class: 'btn btn-primary' %>
+  <div >
+    <%= form.submit 'Add category',class: "Add-category" %>
   </div>
 <% end %>
+</div>

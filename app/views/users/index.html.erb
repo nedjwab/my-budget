@@ -1,14 +1,7 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Users</h1>
-
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
+<div class="splash-container">
+<h1 class = "logo-splash" >My Budget</h1>
+<div class="button">
+<%= link_to  "Sign up", new_user_registration_path,class:"s-button " %>
+<%= link_to "Login", new_user_session_path,class:"s-button" %>
 </div>
-
-<%= link_to "New user", new_user_path %>
+</div>
