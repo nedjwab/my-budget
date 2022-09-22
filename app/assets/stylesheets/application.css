@@ -55,8 +55,13 @@ h1 {
 
 .input {
     width: 90%;
-    padding :11px;
+    padding :19px;
     margin-top: 10px;
+}
+
+.label {
+    color :#3778c2;
+    font-size: 19px;
 }
 
 .login-button {
@@ -126,7 +131,19 @@ h1 {
     text-decoration: none;
     text-align: center;
     font-size: 19px;
-    margin-bottom: 90px;
+}
+
+.Add-category {
+    background-color:#5fb523;
+    color:white;
+    cursor: pointer;
+    border-radius: 6px;
+    border:none;
+    padding : 1.9%;
+    margin-top: 19px;
+    position: relative;
+    left:41%;
+  
 }
 
 .category-title, .category-date {
@@ -156,7 +173,7 @@ h1 {
     border : 1px solid #890F0D;
 }
 
-.Add-button:hover {
+.Add-button:hover,.Add-category:hover {
     background-color:white;
     color:#5fb523;
     border :1px solid #5fb523;
