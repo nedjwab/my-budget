@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   unauthenticated :users do
-    root "groups#index"
+    root "users#index"
   end
 
   authenticated :users do
-    #get "/home", to: "groups#index", as: "home"
-    #root 'groups#index', as: ''
+    #root 'groups#index'
   end
   
   devise_scope :user do

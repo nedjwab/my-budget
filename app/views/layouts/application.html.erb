@@ -7,21 +7,9 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <%= favicon_link_tag asset_path('app-icon.png') %>
+    <script src="https://kit.fontawesome.com/c0f6a6d4e7.js" crossorigin="anonymous"></script>
   </head>
-
   <body>
-  <div class="elements">
-  <p class="logo">My Budget</p>
-    <% if user_signed_in? %>
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete,class:"logout-button" %>
-    <% end %>
-  </div>
-  <% if notice %>
-    <p class="alert alert-success notification"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p class="alert alert-danger notification"><%= alert %></p>
-  <% end %>
     <%= yield %>
   </body>
 </html>

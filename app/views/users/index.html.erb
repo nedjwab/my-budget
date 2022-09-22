@@ -1,14 +1,11 @@
 <p style="color: green"><%= notice %></p>
+<header>
+<%= render partial:"shared/navbar"%>
+</header>
 
-<h1>Users</h1>
+<h1>Splash Screen</h1>
 
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
-</div>
 
-<%= link_to "New user", new_user_path %>
+<%= link_to  "Sign up", new_user_registration_path,class:"decoration" %>
+<%= link_to "Login", new_user_session_path,class:"decoration" %>
+

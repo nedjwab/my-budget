@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all
+    redirect_to groups_path if user_signed_in?
   end
 
   # GET /users/1 or /users/1.json

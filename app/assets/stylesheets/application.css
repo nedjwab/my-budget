@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import "font-awesome";
 
 body {
     margin: 0;
@@ -132,6 +133,7 @@ h1 {
     text-decoration: none;
     text-align: center;
     font-size: 19px;
+    border-radius: 6px;
 }
 
 .Add-category {
@@ -144,7 +146,6 @@ h1 {
     margin-top: 19px;
     position: relative;
     left:41%;
-  
 }
 
 .category-title, .category-date {
@@ -188,7 +189,6 @@ h1 {
 .date-container {
     display : flex ;
     flex-direction:column;
-    gap:14px;
 }
 
 .category-header {
@@ -204,5 +204,9 @@ h1 {
     padding:13px;
     text-align: center;
     color:#3778c2; 
-   
+}
+
+.link-decoration {
+    text-decoration: none;
+    color :#3778c2; 
 }
