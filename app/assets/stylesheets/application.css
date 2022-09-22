@@ -1,8 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-* {
+body {
     margin: 0;
+    overflow: scroll;
 }
 
 h1 {
@@ -10,7 +11,7 @@ h1 {
     font-size:40px;
     margin-top: 27px; 
     color : #3778c2;
-    margin-bottom: 100px;
+    margin-bottom: 56px;
 }
 
 .elements {
@@ -18,8 +19,8 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     background-color: #3778c2;
-    padding: 19px;
     color :white ;
+    margin:0;
 }
 
 .logo {
