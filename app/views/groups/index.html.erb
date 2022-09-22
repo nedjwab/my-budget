@@ -15,7 +15,7 @@
     </div>
     <p>$<%= group.operations.sum(&:amount) %></p>
     <% if can? :manage, group %>
-      <%= button_to "Delete" ,group, method: :delete %>
+      <%= button_to "Delete" ,group, method: :delete ,class: "destroy-button"   %>
     <% end %>
   </div>
   <% end %>

@@ -133,3 +133,19 @@ h1 {
     font-size: 19px;
     color :#D3CEDF;
 }
+
+.destroy-button {
+    text-decoration: none;
+    color :#EEE6CE;
+    background-color: #890F0D;
+    cursor: pointer;
+    padding : 40%;
+    border :none;
+    border-radius: 6px;
+}
+
+.destroy-button:hover,.logout-button:hover {
+    color :#890F0D;
+    background-color:white ;
+    border : 1px solid #890F0D;
+}
