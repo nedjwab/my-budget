@@ -1,6 +1,6 @@
 <header>
 <div class="elements">
-<p class="logo">My Budget</p>
+<p><%= link_to  "My Budget",  users_path, class: "logo"  %></p>
 <% if user_signed_in? %>
   <%= link_to raw("<i class='fas fa-arrow-left' style='font-size:36px'></i>"),  groups_path %>
   <h3><%= title %></h3>

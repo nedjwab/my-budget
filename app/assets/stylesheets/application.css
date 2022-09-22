@@ -28,6 +28,10 @@ h1 {
     font-family: 'Pacifico', cursive;
     font-weight: 600;
     font-size: 1.9rem; 
+    cursor: pointer;
+    margin-left: 23px;
+    color: white;
+    text-decoration: none;
 }
 
 .logout-button {
