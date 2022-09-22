@@ -282,4 +282,19 @@ h1 {
 .button {
   margin: 0 10px;
  }
+
+ .login-container {
+  width: 70%;
+  gap: 23px;
+  margin: 10px 7%;
+  border: 1px solid #d3cedf;
+  padding: 30px;
+ }
+
+
+ .login-button {
+  width: 24%;
+  padding: 3%;
+
+ }
 }
