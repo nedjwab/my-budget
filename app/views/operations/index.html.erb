@@ -16,9 +16,7 @@
     <div class="category-card">
     <%= image_tag @group.icon , alt: 'Category icon',:class=>"decoration" %>
           <p ><%= operation.name %></p>
-          <p><%= l operation.created_at, format: :long,:class =>"decoration" %></p>
-      
-        <p>
+          <p><%= l operation.created_at, format: :long,:class =>"decoration" %></p>    
           <%= operation.amount %>$
           <% if can? :manage, operation %>
         </p>
@@ -27,7 +25,7 @@
       </div>
   <% end %>
 <% else %>
-  <h1>You have no Transactions and new to continue</h1>
+  <h1 class="h1-mobile">You have no Transactions and new to continue</h1>
 <% end %>
 </div>
 <%= link_to 'Add Transaction', new_group_operation_path(@group), class: "Add-button"%>
