@@ -63,7 +63,6 @@ h1 {
     padding : 10px;
     height: 21px;
     border-radius: 9px;
-    margin:19px 3px;
 }
 
 .category-header {
@@ -211,6 +210,10 @@ h1 {
 .decoration {
     font-size: 17px;
     color: gray;
+}
+
+.rahba {
+    margin:33px 3px;
 }
 
 .date-container {

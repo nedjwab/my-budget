@@ -16,7 +16,7 @@
     <div class="category-card">
     <%= image_tag @group.icon , alt: 'Category icon',:class=>"decoration" %>
           <p ><%= operation.name %></p>
-          <p><%= l operation.created_at, format: :long %></p>
+          <p><%= l operation.created_at, format: :long,:class =>"decoration" %></p>
       
         <p>
           <%= operation.amount %>$

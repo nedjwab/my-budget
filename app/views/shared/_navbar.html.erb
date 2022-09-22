@@ -5,7 +5,9 @@
   <%= link_to raw("<i class='fas fa-arrow-left arrow' style='font-size:26px'></i>"),  groups_path %>
 </div>
   <h3 class="title"><%= title %></h3>
+  <div class="rahba">
   <%= link_to 'Sign out', destroy_user_session_path, method: :delete,class:"logout-button" %>
+  </div>
 <% else %>
   <p><%= link_to  "My Budget",  users_path, class: "logo"  %></p>
   <h3 class="title"><%= title %></h3>
