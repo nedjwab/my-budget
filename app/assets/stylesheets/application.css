@@ -295,6 +295,41 @@ h1 {
  .login-button {
   width: 24%;
   padding: 3%;
+ }
+
+ .categories-container {
+  width :100%;
+  gap : 2px;
+ }
+
+ .category-card {
+  gap: 2px;
+  width: 50%;
+  font-weight: 600;
+  font-size: 23px;
+  align-items: center;
+  border: 1px solid #d3cedf;
+  padding: 54px;
+  height: 100px;
+  margin-bottom: 50px;
+  cursor: pointer;
+ }
+ .brow {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+ }
+
+ .pic {
+  width: 30%;
+ }
+
+ .Add-button {
+  padding: 2%;
+  margin-bottom: 23px;
+  position: relative;
+  left: 40%;
 
  }
+
 }
