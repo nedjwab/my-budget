@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   end
 
   resources :users
-  resources :groups, only: %i[index new create] do
+  resources :groups, only: %i[index new create destroy ] do
     resources :operations, only: %i[index new create]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

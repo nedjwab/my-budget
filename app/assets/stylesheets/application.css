@@ -19,7 +19,6 @@ h1 {
     background-color: #3778c2;
     padding: 19px;
     color :white ;
-
 }
 
 .logo {
@@ -69,3 +68,68 @@ h1 {
     border:none;
 }
 
+.notification {
+    text-align: center;
+    margin: 0 27px;
+    color :#3778c2; 
+    padding :13px;
+    width: 50%;
+    font-size: 20px;
+    border: 1px solid black;
+}
+
+.categories-container {
+    display : flex ;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    padding: 15px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  border-radius: 13px;
+  gap: 25px;
+  width: 50%;
+  font-weight: 600;
+  font-size: 23px;
+  align-items: center;
+  border: 1px solid #D3CEDF;
+  justify-content: space-between;
+  padding: 54px;
+  height: 100px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.category-card:hover {
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+}
+
+.Add-button {
+    background-color:#5fb523;
+    color:white;
+    cursor: pointer;
+    width: 9%;
+    padding : 1.5%;
+    border-radius: 6px;
+    border:none;
+    text-decoration: none;
+    text-align: center;
+    font-size: 19px;
+}
+
+.category-title, .category-date {
+    text-decoration: none;
+    color :#3778c2; 
+   
+}
+
+.category-date {
+    font-size: 19px;
+    color :#D3CEDF;
+}

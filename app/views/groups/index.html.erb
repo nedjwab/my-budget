@@ -1,8 +1,5 @@
 
-
 <h3 class="category-header">Categories</h3>
-
-
 <% if @groups.empty? %>
      <h1>There are no categories to show ! Try to Add one</h1>
 <% end %>
@@ -10,21 +7,18 @@
 <% if @groups.count > 0 %>
 <div class="categories-container">
   <% @groups.each do |group| %>
-    <%= link_to group_operations_path(group), class: "card mb-2" do %>
-      <div class="card-body d-flex justify-content-between align-items-center">
-        <%= image_tag group.icon || "http://localhost:3000/users/sign_up.jpg", class: 'card_icon' %>
-        <div>
-          <p class="fw-semibold"><%= group.name %></p>
-          <p class="fw-light"><%= l group.created_at, format: :long %></p>
-        </div>
-        <p class="fw-bolder">
-          $<%= group.operations.sum(&:amount) %>
-        </p>
-      </div>
+    <div class="category-card">
+    <%= image_tag group.icon , alt: 'Category icon' %>
+    <div div class="date-container">
+      <h3><%=link_to group.name,  group_operations_path(group), :class => 'category-title'%></h3>
+      <p class = 'category-date'><%= l group.created_at, format: :long %></p>
+    </div>
+    <p>$<%= group.operations.sum(&:amount) %></p>
+    <% if can? :manage, group %>
+    <%= button_to "Delete" , group_path(group), method: :delete %>
     <% end %>
-  <% end %>
   </div>
-<% else %>
-  <p>You have no categories and new to continue</p>
+  <% end %>
+  <%= link_to 'Add Category', new_group_path, class: "Add-button" %>
+  </div>
 <% end %>
-<%= link_to 'Add Category', new_group_path, class: "btn btn-primary fixed-bottom" %>

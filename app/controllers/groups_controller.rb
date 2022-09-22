@@ -4,7 +4,11 @@ class GroupsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @groups = current_user.groups if user_signed_in?
+    if current_user
+      @groups = current_user.groups
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def new
