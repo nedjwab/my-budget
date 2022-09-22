@@ -8,7 +8,7 @@
 <div class="categories-container">
   <% @groups.each do |group| %>
     <div class="category-card">
-    <%= image_tag group.icon , alt: 'Category icon' %>
+   <%= image_tag group.icon , alt: 'Category icon',:class=>"decoration" %>
     <div div class="date-container">
       <h3><%=link_to group.name,  group_operations_path(group), :class => 'category-title'%></h3>
       <p class = 'category-date'><%= l group.created_at, format: :long %></p>
@@ -19,6 +19,7 @@
     <% end %>
   </div>
   <% end %>
-  <%= link_to 'Add Category', new_group_path, class: "Add-button" %>
   </div>
 <% end %>
+
+<%= link_to 'Add Category', new_group_path, class: "Add-button" %>
