@@ -1,11 +1,7 @@
-<p style="color: green"><%= notice %></p>
-<header>
-<%= render partial:"shared/navbar",locals: {title: 'splash'}%>
-</header>
-
-<h1>Splash Screen</h1>
-
-
-<%= link_to  "Sign up", new_user_registration_path,class:"decoration" %>
-<%= link_to "Login", new_user_session_path,class:"decoration" %>
-
+<div class="splash-container">
+<h1 class = "logo-splash" >My Budget</h1>
+<div class="button">
+<%= link_to  "Sign up", new_user_registration_path,class:"s-button " %>
+<%= link_to "Login", new_user_session_path,class:"s-button" %>
+</div>
+</div>
