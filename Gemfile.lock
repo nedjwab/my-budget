@@ -105,8 +105,7 @@ GEM
     diff-lcs (1.5.0)
     digest (3.1.0)
     erubi (1.11.0)
-    ffi (1.15.5)
-    ffi (1.15.5-x64-mingw32)
+    ffi (1.15.5-x64-mingw-ucrt)
     font-awesome-sass (6.2.0)
       sassc (~> 2.0)
     globalid (1.0.0)
@@ -132,7 +131,6 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.0)
     minitest (5.16.3)
     msgpack (1.5.6)
     net-imap (0.2.3)
@@ -150,17 +148,13 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.8)
-      mini_portile2 (~> 2.8.0)
-      racc (~> 1.4)
-    nokogiri (1.13.8-x64-mingw32)
+    nokogiri (1.13.8-x64-mingw-ucrt)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
-    pg (1.4.3)
-    pg (1.4.3-x64-mingw32)
+    pg (1.4.3-x64-mingw-ucrt)
     public_suffix (5.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -236,8 +230,6 @@ GEM
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
-    sassc (2.4.0-x64-mingw32)
-      ffi (~> 1.9)
     selenium-webdriver (4.4.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -284,8 +276,7 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
-  ruby
-  x64-mingw32
+  x64-mingw-ucrt
 
 DEPENDENCIES
   bootsnap
@@ -297,6 +288,7 @@ DEPENDENCIES
   font-awesome-sass (~> 6.2.0)
   importmap-rails
   jbuilder
+  nokogiri (~> 1.6, >= 1.6.7)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
@@ -312,7 +304,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.0.4p208
+   ruby 3.1.2p20
 
 BUNDLED WITH
-   2.2.33
+   2.3.21
