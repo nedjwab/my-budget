@@ -7,6 +7,8 @@
 - Ruby
 - Ruby on Rails
 -  PostgreSQL
+## Live Demo
+https://nudjbudget.herokuapp.com/
 
 ## Getting Started
 - To setup the project First clone this repo using the git command line  :
