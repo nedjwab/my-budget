@@ -52,3 +52,5 @@ Style/HashTransformValues:
   Enabled: false
 Layout/EndOfLine:
   Enabled: False
+Lint/ScriptPermission:
+  Enabled: True
