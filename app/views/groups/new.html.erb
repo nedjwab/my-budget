@@ -1,0 +1,23 @@
+<header>
+<%= render partial:"shared/navbar" ,locals: {title: 'Add Categories'}%>
+</header>
+
+<div class="min_nav">
+  <h1>Add Categories</h1>
+</div>
+<div class="login-container">
+<%= form_with model: @group, url: groups_path,  data: { turbo: false } do |form| %>
+  <div >
+    <%= form.label :name,:class =>"label" %> </br>
+    <%= form.text_field :name,:class =>"input", placeholder: 'Category name' %>
+  </div> </br>
+  <div>
+    <%= form.label :icon,:class =>"label" %></br>
+    <%= form.url_field :icon,:class =>"input", placeholder: 'Icon url' %>
+  </div>
+
+  <div >
+    <%= form.submit 'Add category',class: "Add-category" %>
+  </div>
+<% end %>
+</div>

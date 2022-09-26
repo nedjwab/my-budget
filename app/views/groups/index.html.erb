@@ -1,0 +1,31 @@
+<header>
+<%= render partial:"shared/navbar" ,locals: {title: 'Categories'}%>
+</header>
+
+
+<h1 class="category-header">Categories</h1>
+<% if @groups.empty? %>
+     <h1>There are no categories to show ! Try to Add one</h1>
+<% end %>
+
+<% if @groups.count > 0 %>
+<div class="categories-container">
+  <% @groups.each do |group| %>
+    <div class="category-card">
+   <%= image_tag group.icon , alt: 'Category icon',:class=>"decoration pic" %>
+    <div div class="date-container">
+      <h3><%=link_to group.name,  group_operations_path(group), :class => 'category-title'%></h3>
+      <p class = 'category-date'><%= l group.created_at, format: :long ,:class =>"decoration"%></p>
+    </div>
+    <div class="brow">
+    <p>$<%= group.operations.sum(&:amount) %></p>
+    <% if can? :manage, group %>
+      <%= button_to "Delete" ,group, method: :delete ,class: "destroy-button"   %>
+    <% end %>
+    </div>
+  </div>
+  <% end %>
+  </div>
+<% end %>
+
+<%= link_to 'Add Category', new_group_path, class: "Add-button" %>

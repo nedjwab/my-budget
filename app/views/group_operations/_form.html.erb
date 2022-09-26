@@ -1,0 +1,27 @@
+<%= form_with(model: group_operation) do |form| %>
+  <% if group_operation.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(group_operation.errors.count, "error") %> prohibited this group_operation from being saved:</h2>
+
+      <ul>
+        <% group_operation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :group_id, style: "display: block" %>
+    <%= form.text_field :group_id %>
+  </div>
+
+  <div>
+    <%= form.label :operation_id, style: "display: block" %>
+    <%= form.text_field :operation_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
